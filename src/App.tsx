@@ -248,10 +248,8 @@ function SectionCard({ icon, title, children }: { icon: string; title: string; c
   return (
     <div className="card reveal-card">
       <div className="card-header">
-        <div className="card-title">
-          <div className="card-title-icon">{icon}</div>
-          {title}
-        </div>
+        <div className="card-icon">{icon}</div>
+        <div className="card-title">{title}</div>
       </div>
       {children}
     </div>
@@ -548,10 +546,11 @@ export default function App() {
 
         {/* Sidebar */}
         <aside className="sidebar">
+          <div className="sidebar-top-line" />
           <div className="sidebar-header">
             <div className="sidebar-header-left">
               <div className="sidebar-dot" />
-              <span>Live Output</span>
+              <span className="sidebar-label">Live Output</span>
             </div>
             <button
               className="btn btn-ghost"
